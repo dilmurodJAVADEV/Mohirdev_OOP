@@ -1,4 +1,4 @@
-package Task7;
+package Task7.A;
 
 public class Rectangle extends GeometricFigure{
     private double sideA;

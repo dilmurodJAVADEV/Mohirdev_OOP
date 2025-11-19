@@ -1,14 +1,14 @@
-package Task7;
+package Task7.A;
 
-public class Triangle extends GeometricFigure{
+public class Trapezium extends GeometricFigure{
     private double sideA;
     private double sideB;
-    private double sideC;
+    private double hidh;
 
-    public Triangle(double sideA, double sideB, double sideC) {
+    public Trapezium(double sideA, double sideB, double hidh) {
         this.sideA = sideA;
         this.sideB = sideB;
-        this.sideC = sideC;
+        this.hidh = hidh;
     }
 
     public double getSideA() {
@@ -27,22 +27,22 @@ public class Triangle extends GeometricFigure{
         this.sideB = sideB;
     }
 
-    public double getSideC() {
-        return sideC;
+    public double getHidh() {
+        return hidh;
     }
 
-    public void setSideC(double sideC) {
-        this.sideC = sideC;
+    public void setHidh(double hidh) {
+        this.hidh = hidh;
     }
 
     @Override
     public double area() {
-        double p = perimeter() / 2;
-        return Math.sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));
+        return (sideA + sideB) * hidh / 2;
     }
 
     @Override
     public double perimeter() {
-        return sideA + sideB + sideC;
+        double sideC = Math.sqrt(Math.pow(hidh,2) + Math.pow((sideA - sideB) / 2, 2));
+        return sideA + sideB + 2 * sideC;
     }
 }
